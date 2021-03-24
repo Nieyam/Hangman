@@ -1,11 +1,23 @@
 # print("bitch") 
 
 random = input("Random woord: ")
-# print(random)
+fouten = 0
+gebruikt = []
+
 start = True
 
-while start: #maak je een while loop, zo kan je letters blijven raden
-    letters = input("Kies een letter: ")
-    kaas = letters in random #boolean, komt true/false uit
+while start:
+    letter = input("Kies een letter: ")
 
-    print(kaas)
+    if letter in gebruikt:
+        print("Al gebruikt")
+    else:
+        gebruikt.append(letter)
+
+        kaas = letter in random 
+        if kaas == False:
+            fouten = fouten + 1
+
+        if fouten > 8:
+            print("Game over.. try again")
+            break;
