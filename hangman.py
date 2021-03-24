@@ -7,9 +7,7 @@ goed = []
 for index in random:
     goed += "_"
 
-start = True
-
-while start:
+while True:
     letter = input("Kies een letter: ")
 
     if letter in gebruikt:
@@ -25,10 +23,13 @@ while start:
                 if random[index] == letter:
                     goed[index] = letter
 
-            goed.append(letter)
-
         if fouten > 8:
             print("Game over.. try again")
+            break;
+
+        geraden = ''.join(goed)
+        if (geraden == random):
+            print("Goedzo bitch")
             break;
 
         print(goed)
