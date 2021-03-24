@@ -8,7 +8,7 @@ for index in random:
     goed += "_"
 
 while True:
-    letter = input("Kies een letter: ")
+    letter = input("Kies een letter: ") #let op spaties
 
     if letter in gebruikt:
         print("Al gebruikt")
